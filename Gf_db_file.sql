@@ -16,6 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `application_stages`
+--
+
+DROP TABLE IF EXISTS `application_stages`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `application_stages` (
+  `application_stages_id` int unsigned NOT NULL AUTO_INCREMENT,
+  `stage_number` int DEFAULT NULL,
+  `stage_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`application_stages_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `application_stages`
+--
+
+LOCK TABLES `application_stages` WRITE;
+/*!40000 ALTER TABLE `application_stages` DISABLE KEYS */;
+INSERT INTO `application_stages` VALUES (1,0,'Organisation Approval '),(2,1,'Allow to Proceed'),(3,2,'Paid');
+/*!40000 ALTER TABLE `application_stages` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `applications`
 --
 
@@ -41,7 +66,7 @@ CREATE TABLE `applications` (
 
 LOCK TABLES `applications` WRITE;
 /*!40000 ALTER TABLE `applications` DISABLE KEYS */;
-INSERT INTO `applications` VALUES (1,1,5,0,'2021-06-17 23:42:16','2021-06-17 23:42:16'),(2,5,4,0,'2021-06-19 22:25:10','2021-06-18 00:01:05'),(3,1,4,0,'2021-06-19 21:30:59','2021-06-18 14:34:04'),(4,2,4,0,'2021-06-19 22:03:25','2021-06-18 14:51:14');
+INSERT INTO `applications` VALUES (1,1,5,0,'2021-06-17 23:42:16','2021-06-17 23:42:16'),(2,5,4,0,'2021-06-19 23:39:44','2021-06-18 00:01:05'),(3,1,4,0,'2021-06-19 23:42:50','2021-06-18 14:34:04'),(4,2,4,0,'2021-06-19 23:42:42','2021-06-18 14:51:14');
 /*!40000 ALTER TABLE `applications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -160,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-19 23:58:15
+-- Dump completed on 2021-06-20  0:43:51

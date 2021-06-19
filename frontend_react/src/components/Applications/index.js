@@ -80,7 +80,7 @@ class Applications extends Component
                     <div>{application.name}  </div>
                     <div>{application.charity_name} </div>
                     <div>{application.country_name} </div>
-                    <div> {application.stage} </div>
+                    <div> {application.stage_name} </div>
                     <div> {application.created_at} </div>
                     <div> <button onClick={()=>this.moveApplication(application.application_id,application.stage,'back')}>Back</button> &nbsp;<button onClick={()=>this.moveApplication(application.application_id,application.stage,'forward')}>Forward</button> </div>
                 </React.Fragment>

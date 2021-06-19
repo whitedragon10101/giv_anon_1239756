@@ -25,6 +25,6 @@ class Application extends Model
 
     public function charity()
     {
-        return $this->hasOne(Charitie::class);
+        return $this->hasOne(Charity::class);
     }
 }

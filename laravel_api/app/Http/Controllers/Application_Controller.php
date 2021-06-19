@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Application;
+use App\Models\Application_stages;
 use App\Models\User;
 use App\Models\User_role;
 use App\Models\Charity;
+
 use Illuminate\Support\Facades\DB;
 use \Illuminate\Http\Response;
 
@@ -32,10 +34,12 @@ class Application_Controller extends Controller
 
 
         $application_data = DB::table('applications')
-            ->select('applications.application_id','users.name','charities.charity_name','countries.country_name','applications.stage','applications.created_at')
+            ->select('applications.application_id','users.name','charities.charity_name','countries.country_name','applications.stage','application_stages.stage_name','applications.created_at')
             ->leftJoin('users', 'applications.user_id', '=', 'users.user_id')
             ->leftJoin('charities', 'applications.charity_id', '=', 'charities.charity_id')
             ->leftJoin('countries', 'charities.country_id', '=', 'countries.country_id')
+            ->leftJoin('application_stages', 'applications.stage', '=', 'application_stages.stage_number')
+
             ->get();
 
 
@@ -190,9 +194,14 @@ class Application_Controller extends Controller
     //TASK 4 - method for validating that an application can be moved
     public function canItMove($application,$stage)
     {
-        if($stage>2 || $stage<0)
+        if($stage<0)
         {
-            echo "there are no stages with that number - ";
+            echo "application stage cannot go farther back - ";
+            return false;
+        }
+        if($stage>2)
+        {
+            echo "application stage cannot go farther forward - ";
             return false;
         }
 
