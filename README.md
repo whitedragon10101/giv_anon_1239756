@@ -10,7 +10,7 @@
 
 The tables for this can be found in the Gf_db_file.sql (installation instructions below). 
 
-I used the MVC framework Laravel for the php.  The php laravel model files are in :
+I used the MVC framework Laravel for the php.  The php Laravel model files are in :
 
 ```
 Laravel_api\app\models\
