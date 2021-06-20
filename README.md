@@ -150,7 +150,7 @@ This allows the application stages to be reported to the front end as plain text
 
 **2)**
 
-The laravel project has an env file located here
+The Laravel project has an env file located here
 
 ```
  Laravel_api\.env
@@ -178,7 +178,7 @@ The server should now be live.
 
 Note :
 
-If laravel 8 is not installed instructions for installation can be found here:
+If Laravel 8 is not installed instructions for installation can be found here:
 
 https://laravel.com/docs/8.x/installation
 
@@ -195,7 +195,7 @@ npm install //just the first time to install dependencies
 npm start
 ```
 
-This uses node to start a server and serve the react app on  http://localhost:3000
+This uses Node to start a server and serve the React app on  http://localhost:3000
 
 This usually opens a browser to use the app at this address automatically.
 
@@ -203,7 +203,7 @@ This usually opens a browser to use the app at this address automatically.
 
 Note :
 
-If npm (node package manager) is not installed, the node installer can be found here
+If npm (Node package manager) is not installed, the Node installer can be found here
 
 https://nodejs.org/en/download/
 
