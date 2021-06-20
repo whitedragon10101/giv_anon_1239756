@@ -27,7 +27,7 @@ class Application_Controller extends Controller
     */
 
 
-    //BONUS TASK - endpoint to display an application with linked information
+    //BONUS TASK - endpoint to display an application with linked information so you can see the application moving forward and back
     public function getApplicationMixedData()
     {
         error_log("Getting application mixed data");
@@ -78,7 +78,7 @@ class Application_Controller extends Controller
             return response("error-charity does not exist",404);
         }
 
-        //redundant now as noth charity is approved and application state match at 0 and 1
+        //redundant now as charity is approved and application state match at 0 and 1
         // but in the future its possible the numbers for the application stages will not be 0 and 1
         $application_stage = $charity->is_approved == 1 ? 1 : 0;
 
