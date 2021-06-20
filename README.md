@@ -10,7 +10,7 @@
 
 The tables for this can be found in the Gf_db_file.sql (installation instructions below). 
 
-I used the MVC framawork Laravel for the php.  The php laravel model files are in :
+I used the MVC framework Laravel for the php.  The php laravel model files are in :
 
 ```
 Laravel_api\app\models\
@@ -122,9 +122,9 @@ The method is
 public function getApplicationMixedData()
 ```
 
-As there is no authentication or login I have simulated the logged in user just for demonstration purposes with a text field where you can enter a user_id.  By default the user_id will be 4 which is a user that has permission to move an application. If you change this to 2 you can see the behaviour for a user which does not have the correct permission to move and application. i.e Attempts to move the application will be rejected.
+As there is no authentication or login I have simulated the logged in user just for demonstration purposes with a text field where you can enter a user_id.  By default the user_id will be 4 which is a user that has permission to move an application. If you change this to 2 you can see the behaviour for a user which does not have the correct permission to move an application. i.e Attempts to move the application will be rejected.
 
-The last column in the table contains two buttons backward and forward.  These buttons trigger the endpoint from task 5 along with all associated validation.  When an error occurs the users is alerted with an alert message describing what is wrong in plain english. 
+The last column in the table contains two buttons backward and forward.  These buttons trigger the endpoint from task 5 along with all associated validation.  When an error occurs the user is alerted with an alert message describing what is wrong in plain english. 
 
 
 
@@ -197,7 +197,7 @@ npm start
 
 This uses node to start a server and serve the react app on  http://localhost:3000
 
-This usally opens a browser to use the app at this address automatically.
+This usually opens a browser to use the app at this address automatically.
 
 
 
