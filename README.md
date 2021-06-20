@@ -6,7 +6,7 @@
 
 
 
-**1) Develop and application model**
+**1) Develop an application model**
 
 The tables for this can be found in the Gf_db_file.sql (installation instructions below). 
 
