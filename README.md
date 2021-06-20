@@ -34,7 +34,11 @@ The controller for the endpoint can be found in
 Laravel_api\app\Http\Controllers\Application_Controller.php
 ```
 
+The method to create an application is called
 
+```
+public function store(Request $request)
+```
 
 **3) Write a method for validating if a user can take certain actions**
 
@@ -118,7 +122,7 @@ The method is
 public function getApplicationMixedData()
 ```
 
-As there is no authentication or login I have simulated the logged in user just for demonstration purposes with a text field that you can enter a user_id.  By default the number will be 4 which is a user which has permission to move an application. If you change this to 2 you can see the behaviour for a user which does not have the correct permission to move and application.
+As there is no authentication or login I have simulated the logged in user just for demonstration purposes with a text field where you can enter a user_id.  By default the user_id will be 4 which is a user that has permission to move an application. If you change this to 2 you can see the behaviour for a user which does not have the correct permission to move and application. i.e Attempts to move the application will be rejected.
 
 The last column in the table contains two buttons backward and forward.  These buttons trigger the endpoint from task 5 along with all associated validation.  When an error occurs the users is alerted with an alert message describing what is wrong in plain english. 
 
@@ -152,7 +156,7 @@ The laravel project has an env file located here
  Laravel_api\.env
 ```
 
-The following values need to be edited.  If your hosting port and ip are the same likely only the password will require changing.
+The following values need to be edited.  If your hosting port and ip are the same, then it is likely only the password will require changing.
 
 ```
 DB_HOST=127.0.0.1
@@ -184,14 +188,14 @@ https://laravel.com/docs/8.x/installation
 
 **1)** 
 
-Then to run the front end React app open a new terminal and cd into front_end_react and type
+To run the front end React app open a new terminal and cd into front_end_react and type
 
 ```
-npm install //just on the first time to install dependencies
+npm install //just the first time to install dependencies
 npm start
 ```
 
-This use node to start a server and serve the react app on  http://localhost:3000
+This uses node to start a server and serve the react app on  http://localhost:3000
 
 This usally opens a browser to use the app at this address automatically.
 
